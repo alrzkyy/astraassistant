@@ -61,8 +61,16 @@ export async function GET(request: NextRequest) {
       });
     }
 
+    // If Neoxr API returned an error message (often under 'msg' instead of 'message')
+    if (response.data.status === false && response.data.msg) {
+      return NextResponse.json(
+        { error: `API Error: ${response.data.msg}` },
+        { status: 400 }
+      );
+    }
+
     return NextResponse.json({
-      message: response.data.data?.message || response.data.message || 'No response received.',
+      message: response.data.data?.message || response.data.message || response.data.msg || 'No response received.',
       model,
     });
   } catch (error) {

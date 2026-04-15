@@ -79,7 +79,7 @@ type TranslationKeys = {
 const translations: Record<Language, TranslationKeys> = {
   id: {
     welcomeTitle: 'AstraAssistant',
-    welcomeSubtitle: 'Asisten AI premium kamu — didukung berbagai model bahasa.\nPilih mesin dan mulai eksplorasi.',
+    welcomeSubtitle: 'Asisten AI yang sedang dicoba kembangkan oleh developer kami — didukung berbagai model bahasa.\nPilih mesin dan mulai eksplorasi.',
     startChat: 'Mulai Chat',
     newChat: 'Chat Baru',
     recentChats: 'Chat Terbaru',
